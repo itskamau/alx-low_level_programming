@@ -1,26 +1,44 @@
 #include "main.h"
+#include <stdio.h>
+#include <unistd.h>
 
 /**
+ * print_char - function declaration
+ * Description: print _putchar, has no arguements
+ * Return: has no return value
+ */
 
-* main - print _putchar
+char print_char(void);
 
-* is written by Johnson
-
-* Return: 0
-
-*/
+/**
+ * main - entry point
+ * Description: calls print_char()
+ * Return: 0
+ */
 
 int main(void)
 {
-       	_putchar('_');
-        _putchar('p');
-        _putchar('u');
-        _putchar('t');
-        _putchar('c');
-        _putchar('h');
-        _putchar('a');
-        _putchar('r');
-        _putchar('\n');
+	print_char();
+	return (0);
+}
 
-        return (0);
+/**
+ * print_char - function definition
+ * Description: prints out '_putchar'
+ * Return: has no return value
+ */
+
+char print_char(void)
+{
+	char my_string_array[] = "_putchar\n";
+	int index = 0;
+
+	while (my_string_array[index] != '\0')
+	{
+		char letter = my_string_array[index];
+
+		putchar(letter);
+		index++;
+	}
+	return (0);
 }
