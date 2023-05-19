@@ -22,7 +22,7 @@ int main(void)
 
 	printf("Last digit of %d is ", n);
 
-	number = abs(n) % 10;
+	number = n % 10;
 
 	if (number > 5)
 	{
